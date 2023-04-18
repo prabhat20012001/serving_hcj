@@ -1,8 +1,12 @@
-const path=require('path');
-const productsController=require('../controllers/products')
+// Import dependencies
 const express = require('express');
-const router=express.Router();
+const productsController = require('../controllers/products');
 
-router.get('/',productsController.getProducts);
+// Create router object
+const router = express.Router();
 
-module.exports=router;
+// Define route with callback function
+router.get('/', productsController.getProducts);
+
+// Export router object
+module.exports = router;
